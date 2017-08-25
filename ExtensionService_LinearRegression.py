@@ -237,7 +237,7 @@ class ExtensionService(SSE.ConnectorServicer):
     @staticmethod
     def _polynomial(request):
         """
-        use tensorflow estimator with gradient descent optimizer to run polynomial linear regression expression: y = (Wx + b)i^5
+        use tensorflow with gradient descent optimizer to run polynomial linear regression expression: y = (Wx + b)i^5
         :param request: an iterable sequence of RowData
         :return: the same iterable sequence of row data as received
         """
@@ -316,8 +316,6 @@ class ExtensionService(SSE.ConnectorServicer):
                 yPrediction = Y_pred.eval(feed_dict={X: xSense}, session=sess)
                 print("Polynomial yPrediction %s"% yPrediction)
 
-            # predictions = estimator.predict(input_fn=predict_input_fn, predict_keys=['y'])
-            # predictions = [{"i": 0, "y": 0}, {"i": 1, "y": 1}, {"i": 2, "y": 2}, {"i": 3, "y": 3}]
             for p in enumerate(yPrediction):
                 # Retrieve value from tensor
                 result = p[1]
