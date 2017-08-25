@@ -1,6 +1,8 @@
 # Example: Linear Regression
 In this example we cover some basic Tensorflow models and support for different SSE function types. It's based on the [Column Summing example](https://github.com/qlik-oss/server-side-extension/tree/master/examples/python/ColumnOperations) for Qlik's Server Side Extensions (SSE).
 
+To learn more about Tensorflow, here is their [Getting Started Guide](https://www.tensorflow.org/get_started/get_started) and [Installation Instructions](https://www.tensorflow.org/install/). Please note that this project was created with Tensorflow v1.3.0 and Python v3.5.4
+
 ## Content
 * [Defined functions](#defined-functions)
     * [`simple` function](#simple-function)
