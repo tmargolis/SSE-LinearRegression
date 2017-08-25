@@ -8,6 +8,8 @@ In this example we cover some basic calculations and support for different funct
     * [`polynomial` function](#polynomial-function)
 * [Sense document](#sense-document)
 * [Run the example!](#run-the-example)
+* [Conclusion](#conclusion)
+* [Future Work](#future-work)
 
 ## Defined functions
 This plugin has three user defined functions, `simple`, `estimator` and `polynomial`, all operating on numerical data. The `ExecuteFunction` method in the `ExtensionService` class is the same for any of the example plugins, but the JSON file and the `functions` method are different. The JSON file for this plugin includes the following information:
