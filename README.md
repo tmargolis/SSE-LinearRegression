@@ -1,7 +1,7 @@
-# Example: Linear Regression
-In this example we cover some basic Tensorflow models and support for different SSE function types. It's based on the [Column Summing example](https://github.com/qlik-oss/server-side-extension/tree/master/examples/python/ColumnOperations) for Qlik's Server Side Extensions (SSE).
+# Qlik Server Side Extension: Linear Regression using TensorFlow
+In this example we cover some basic TensorFlow models and support for different SSE function types. It's based on the [Column Summing example](https://github.com/qlik-oss/server-side-extension/tree/master/examples/python/ColumnOperations) for Qlik's Server Side Extensions (SSE).
 
-To learn more about Tensorflow, here is their [Getting Started Guide](https://www.tensorflow.org/get_started/get_started) and [Installation Instructions](https://www.tensorflow.org/install/). Please note that this project was created with Tensorflow v1.3.0 and Python v3.5.4
+To learn more about TensorFlow, here is their [Getting Started Guide](https://www.tensorflow.org/get_started/get_started) and [Installation Instructions](https://www.tensorflow.org/install/). Please note that this project was created with TensorFlow v1.3.0 and Python v3.5.4
 
 ![Example Screenshot](Tensorflow-scrnshot.png)
 
@@ -40,7 +40,7 @@ class ExtensionService(SSE.ConnectorServicer):
 ```
 
 ### `simple` function
-The first function is a Tensorflow function that manually creates a session to run the linear regression expression y=Wx + b. We iterate over the `BundledRows` and extract the numerical values, which we then use with placeholders to train our Tensorflow model using a Gradient Descent Optimizer. After training, we once again run through all x values to derive the predicted y values. Finally, we transform the results into the desired form in order to return them to the Sense client.
+The first function is a TensorFlow function that manually creates a session to run the linear regression expression y=Wx + b. We iterate over the `BundledRows` and extract the numerical values, which we then use with placeholders to train our Tensorflow model using a Gradient Descent Optimizer. After training, we once again run through all x values to derive the predicted y values. Finally, we transform the results into the desired form in order to return them to the Sense client.
 
 ```python
     @staticmethod
@@ -193,7 +193,7 @@ The second function uses Tensorflow's built-in estimator to help automate traini
 ```
 
 ### `polynomial` function
-The third function uses Tensorflow (this time without an Estimator) to run training and predict a polynomial linear regression expression. We iterate over the `BundledRows` again and retrieve the numerical values, build our model, train, evaluate and finally predict. We then iterate over all the predicted y values and then return the result as bundled rows.
+The third function uses TensorFlow (this time without an Estimator) to run training and predict a polynomial linear regression expression. We iterate over the `BundledRows` again and retrieve the numerical values, build our model, train, evaluate and finally predict. We then iterate over all the predicted y values and then return the result as bundled rows.
 
 ```python
     @staticmethod
@@ -296,7 +296,7 @@ The user defined function calls are straightforward as implemented. Ensure you s
 To run this example, follow the instructions in [Getting started with the SSE Python examples](https://github.com/qlik-oss/server-side-extension/blob/master/examples/python/GetStarted.md).
 
 ## Conclusion
-This has been a great learning experience to become better acquainted with Qlik Server Side Extensions and Tensorflow. However, the models I've built function very poorly and Qlik's built-in linear regression is much more robust and speedy. Most of the models only function OK with certain data values. 
+This has been a great learning experience to become better acquainted with Qlik Server Side Extensions and TensorFlow. However, the models I've built function very poorly and Qlik's built-in linear regression is much more robust and speedy. Most of the models only function OK with certain data values. 
 
 ## Future work
-There is surely quite a lot I could do to improve these linear regression models with Tensorflow - which I may continue to do. Though my real interest is in using Tensorflow's Recurrent Neural Networks such as Long Short Term Memory (LSTM) networks. I believe this should be idealy suited for classifying time-series data.
+There is surely quite a lot I could do to improve these linear regression models with TensorFlow - which I may continue to do. Though my real interest is in using TensorFlow's Recurrent Neural Networks such as Long Short Term Memory (LSTM) networks. I believe this should be idealy suited for classifying time-series data.
