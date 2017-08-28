@@ -3,6 +3,8 @@ In this example we cover some basic Tensorflow models and support for different 
 
 To learn more about Tensorflow, here is their [Getting Started Guide](https://www.tensorflow.org/get_started/get_started) and [Installation Instructions](https://www.tensorflow.org/install/). Please note that this project was created with Tensorflow v1.3.0 and Python v3.5.4
 
+![Example Screenshot](Tensorflow-scrnshot.png)
+
 ## Content
 * [Defined functions](#defined-functions)
     * [`simple` function](#simple-function)
